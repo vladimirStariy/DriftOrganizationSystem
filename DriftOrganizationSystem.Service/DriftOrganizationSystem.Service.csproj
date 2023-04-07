@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
@@ -9,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MetroModernUI" Version="1.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DriftOrganizationSystem.Service\DriftOrganizationSystem.Service.csproj" />
+    <ProjectReference Include="..\DriftOrganizationSystem.Data\DriftOrganizationSystem.Data.csproj" />
+    <ProjectReference Include="..\DriftOrganizationSystem.Domain\DriftOrganizationSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

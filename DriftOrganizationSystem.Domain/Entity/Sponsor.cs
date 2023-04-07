@@ -2,8 +2,10 @@
 {
     public class Sponsor
     {
-        public int Sponsor_ID { get; set; }
+        public uint Sponsor_ID { get; set; }
         public string SponsorName { get; set; }
         public string ContactFace { get; set; }
+
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

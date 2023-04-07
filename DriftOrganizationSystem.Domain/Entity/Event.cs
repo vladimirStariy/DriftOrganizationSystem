@@ -2,8 +2,12 @@
 {
     public class Event
     {
-        public int Event_ID { get; set; }
+        public uint Event_ID { get; set; }
         public string EventName { get; set; }
         public DateTime EventDate { get; set; }
+
+        public virtual ICollection<Organizator> Organizators { get; set; }
+        public virtual ICollection<Sponsor> Sponsors { get; set; }
+        public virtual ICollection<Judge> Judges { get; set; }
     }
 }

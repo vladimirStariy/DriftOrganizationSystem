@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
+    <ProjectReference Include="..\DriftOrganizationSystem.Domain\DriftOrganizationSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>
