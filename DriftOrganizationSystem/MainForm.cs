@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DriftOrganizationSystem.View
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
