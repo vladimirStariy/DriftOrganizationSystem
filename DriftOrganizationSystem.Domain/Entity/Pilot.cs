@@ -8,8 +8,8 @@
         public string Fathername { get; set; }
         public int Age { get; set; }
 
-        public virtual Car Car { get; set; }
-        public virtual Achievement Achievement { get; set; }
+        public List<Car> Cars { get; set; }
+        public List <Achievement> Achievements { get; set; }
         //public virtual Registration Registration { get; set; }
     }
 }

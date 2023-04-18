@@ -27,10 +27,17 @@ namespace DriftOrganizationSystem.View
             PilotGrid.DataSource = pilotService.GetPilots();
             PilotGrid.Columns[0].Visible = false;
 
-            AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.Rows[0].Cells[0].Value));
-            AutoGrid.Columns[0].Visible = false;
-            AutoGrid.Columns[1].Visible = false;
-            checker = 1;
+            try
+            {
+                AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.Rows[0].Cells[0].Value));
+                AutoGrid.Columns[0].Visible = false;
+                AutoGrid.Columns[1].Visible = false;
+                checker = 1;
+            }
+            catch
+            {
+
+            }
         }
 
         private void PilotButton_Click(object sender, EventArgs e)
@@ -58,6 +65,7 @@ namespace DriftOrganizationSystem.View
             if (PF.ShowDialog() == DialogResult.OK)
             {
                 AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+
             }
         }
 

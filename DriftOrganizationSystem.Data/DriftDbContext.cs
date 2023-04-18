@@ -38,16 +38,10 @@ namespace DriftOrganizationSystem.Data
 
                 builder.Property(x => x.Pilot_ID).ValueGeneratedOnAdd();
 
-                builder.HasOne(x => x.Car)
-                   .WithOne(x => x.Pilot)
-                   .HasPrincipalKey<Pilot>(x => x.Pilot_ID)
-                   .OnDelete(DeleteBehavior.Cascade);
 
-                builder.HasOne(x => x.Achievement)
-                   .WithOne(x => x.Pilot)
-                   .HasPrincipalKey<Pilot>(x => x.Pilot_ID)
-                   .OnDelete(DeleteBehavior.Cascade);
             });
+
+            
 
             modelBuilder.Entity<Car>(builder =>
             {
@@ -55,14 +49,20 @@ namespace DriftOrganizationSystem.Data
 
                 builder.Property(x => x.Car_ID).ValueGeneratedOnAdd();
 
-                
+                builder.HasOne(x => x.Pilot)
+                       .WithMany(x => x.Cars)
+                       .HasForeignKey(x => x.Pilot_ID);
             });
-
+                
             modelBuilder.Entity<Achievement>(builder =>
             {
                 builder.ToTable("Achievements").HasKey(x => x.Achievement_ID);
 
                 builder.Property(x => x.Achievement_ID).ValueGeneratedOnAdd();
+
+                builder.HasOne(x => x.Pilot)
+                       .WithMany(x => x.Achievements)
+                       .HasForeignKey(x => x.Pilot_ID);
             });
         }
     }
