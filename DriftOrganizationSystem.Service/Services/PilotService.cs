@@ -81,10 +81,22 @@ namespace DriftOrganizationSystem.Service.Services
             return carsView;
         }
 
-        public List<Achievement> GetPilotAchievements(int id)
+        public List<AchievementViewModel> GetPilotAchievements(int id)
         {
-            return _pilotRepository.GetPilotAchievements(id);
+            List<AchievementViewModel> achievementView = new List<AchievementViewModel>();
+            foreach(var item in _pilotRepository.GetPilotAchievements(id))
+            {
+                AchievementViewModel model = new AchievementViewModel();
+                model.Achievement_ID = item.Achievement_ID;
+                model.Pilot_ID = item.Pilot_ID;
+                model.Name = item.Name;
+                model.Place = item.Place;
+                model.Car = item.Car;
+                model.Year = item.Year;
+                model.Prize = item.Prize;
+                achievementView.Add(model);
+            }
+            return achievementView;
         }
-
     }
 }

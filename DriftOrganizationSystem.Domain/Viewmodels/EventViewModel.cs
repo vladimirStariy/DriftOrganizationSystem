@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DriftOrganizationSystem.Domain.Viewmodels
+{
+    public class EventViewModel
+    {
+        public uint Event_ID { get; set; }
+        public string Event_Name { get; set; }
+        public DateTime Event_Date { get; set; }
+    }
+}

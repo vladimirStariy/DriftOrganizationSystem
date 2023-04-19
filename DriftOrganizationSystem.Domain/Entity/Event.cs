@@ -9,5 +9,6 @@
         public virtual ICollection<Organizator> Organizators { get; set; }
         public virtual ICollection<Sponsor> Sponsors { get; set; }
         public virtual ICollection<Judge> Judges { get; set; }
+        public virtual ICollection<Registration> Registrations { get; set; }
     }
 }

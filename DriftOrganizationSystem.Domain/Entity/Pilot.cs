@@ -1,4 +1,6 @@
-﻿namespace DriftOrganizationSystem.Domain.Entity
+﻿using System.Collections.Generic;
+
+namespace DriftOrganizationSystem.Domain.Entity
 {
     public class Pilot
     {
@@ -10,6 +12,6 @@
 
         public List<Car> Cars { get; set; }
         public List <Achievement> Achievements { get; set; }
-        //public virtual Registration Registration { get; set; }
+        public List <Registration> Registrations { get; set; }
     }
 }

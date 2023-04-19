@@ -1,4 +1,5 @@
-﻿using DriftOrganizationSystem.Service.Services;
+﻿using DriftOrganizationSystem.Domain.Entity;
+using DriftOrganizationSystem.Service.Services;
 using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,11 @@ namespace DriftOrganizationSystem.View
                 AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.Rows[0].Cells[0].Value));
                 AutoGrid.Columns[0].Visible = false;
                 AutoGrid.Columns[1].Visible = false;
+
+                AchievementGrid.DataSource = pilotService.GetPilotAchievements(Convert.ToInt32(PilotGrid.Rows[0].Cells[0].Value));
+                AchievementGrid.Columns[0].Visible = false;
+                AchievementGrid.Columns[1].Visible = false;
+
                 checker = 1;
             }
             catch
@@ -61,18 +67,34 @@ namespace DriftOrganizationSystem.View
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            CarForm PF = new CarForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
-            if (PF.ShowDialog() == DialogResult.OK)
+            try
             {
-                AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
-
+                CarForm PF = new CarForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                if (PF.ShowDialog() == DialogResult.OK)
+                {
+                    AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                    AutoGrid.Columns[0].Visible = false;
+                    AutoGrid.Columns[1].Visible = false;
+                    checker = 1;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Выберите пилота");
             }
         }
 
         private void PilotGrid_SelectionChanged(object sender, EventArgs e)
         {
-            if(checker == 1)
-                AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+            try
+            {
+                if (checker == 1)
+                    AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+            }
+            catch
+            {
+
+            }
         }
     }
 }

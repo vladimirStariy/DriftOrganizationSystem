@@ -198,9 +198,9 @@
             this.panel7.Controls.Add(this.AchievementGrid);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(396, 280);
+            this.panel7.Location = new System.Drawing.Point(400, 280);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(396, 203);
+            this.panel7.Size = new System.Drawing.Size(392, 203);
             this.panel7.TabIndex = 13;
             // 
             // AchievementGrid
@@ -234,6 +234,7 @@
             this.AchievementGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.AchievementGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.AchievementGrid.Location = new System.Drawing.Point(0, 25);
+            this.AchievementGrid.Margin = new System.Windows.Forms.Padding(5);
             this.AchievementGrid.MultiSelect = false;
             this.AchievementGrid.Name = "AchievementGrid";
             this.AchievementGrid.ReadOnly = true;
@@ -249,7 +250,7 @@
             this.AchievementGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AchievementGrid.RowTemplate.Height = 25;
             this.AchievementGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AchievementGrid.Size = new System.Drawing.Size(396, 178);
+            this.AchievementGrid.Size = new System.Drawing.Size(392, 178);
             this.AchievementGrid.TabIndex = 2;
             // 
             // panel8
@@ -258,7 +259,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(396, 25);
+            this.panel8.Size = new System.Drawing.Size(392, 25);
             this.panel8.TabIndex = 1;
             // 
             // toolStrip3
@@ -273,7 +274,7 @@
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip3.Size = new System.Drawing.Size(396, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(392, 25);
             this.toolStrip3.Stretch = true;
             this.toolStrip3.TabIndex = 0;
             this.toolStrip3.Text = "toolStrip3";
@@ -312,7 +313,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 280);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(396, 203);
+            this.panel3.Size = new System.Drawing.Size(392, 203);
             this.panel3.TabIndex = 12;
             // 
             // AutoGrid
@@ -346,6 +347,7 @@
             this.AutoGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.AutoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.AutoGrid.Location = new System.Drawing.Point(0, 25);
+            this.AutoGrid.Margin = new System.Windows.Forms.Padding(5);
             this.AutoGrid.MultiSelect = false;
             this.AutoGrid.Name = "AutoGrid";
             this.AutoGrid.ReadOnly = true;
@@ -361,7 +363,7 @@
             this.AutoGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AutoGrid.RowTemplate.Height = 25;
             this.AutoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AutoGrid.Size = new System.Drawing.Size(396, 178);
+            this.AutoGrid.Size = new System.Drawing.Size(392, 178);
             this.AutoGrid.TabIndex = 2;
             // 
             // panel6
@@ -370,7 +372,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(396, 25);
+            this.panel6.Size = new System.Drawing.Size(392, 25);
             this.panel6.TabIndex = 1;
             // 
             // toolStrip2
@@ -385,7 +387,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(396, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(392, 25);
             this.toolStrip2.Stretch = true;
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
@@ -468,6 +470,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
             this.panel4.Controls.Add(this.PilotGrid);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -508,7 +511,7 @@
             this.PilotGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.PilotGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PilotGrid.Location = new System.Drawing.Point(0, 25);
-            this.PilotGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.PilotGrid.Margin = new System.Windows.Forms.Padding(5);
             this.PilotGrid.MultiSelect = false;
             this.PilotGrid.Name = "PilotGrid";
             this.PilotGrid.ReadOnly = true;
