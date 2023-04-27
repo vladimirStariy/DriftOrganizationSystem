@@ -61,5 +61,13 @@ namespace DriftOrganizationSystem.Data.Repository
                 return _db.Achievements.Where(x => x.Pilot_ID == id).ToList();
             }
         }
+
+        public Pilot GetById(uint id)
+        {
+            using (DriftDbContext _db = new DriftDbContext())
+            {
+                return _db.Pilots.Where(x => x.Pilot_ID == id).FirstOrDefault();
+            }
+        }
     }
 }

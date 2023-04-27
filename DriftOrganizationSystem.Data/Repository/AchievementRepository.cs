@@ -36,5 +36,13 @@ namespace DriftOrganizationSystem.Data.Repository
                 _db.SaveChanges();
             }
         }
+
+        public Achievement GetById(uint id)
+        {
+            using (DriftDbContext _db = new DriftDbContext())
+            {
+                return _db.Achievements.Where(x => x.Achievement_ID == id).FirstOrDefault();
+            }
+        }
     }
 }

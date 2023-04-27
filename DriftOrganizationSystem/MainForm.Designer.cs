@@ -47,6 +47,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оРазработчикеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -75,14 +78,20 @@
             this.PilotAddButton = new System.Windows.Forms.ToolStripButton();
             this.OrganizatorEditButton = new System.Windows.Forms.ToolStripButton();
             this.OrganizatorDeleteButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.SearchTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.PilotSearchButton = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.metroGrid = new MetroFramework.Controls.MetroGrid();
             this.panel12 = new System.Windows.Forms.Panel();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.metroGrid = new MetroFramework.Controls.MetroGrid();
             this.Header.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -105,9 +114,9 @@
             this.toolStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid)).BeginInit();
             this.panel12.SuspendLayout();
             this.toolStrip4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -118,14 +127,15 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(800, 50);
+            this.Header.Size = new System.Drawing.Size(1000, 50);
             this.Header.TabIndex = 3;
+            this.Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Header_MouseDown);
             // 
             // panel13
             // 
             this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
             this.panel13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel13.Location = new System.Drawing.Point(750, 5);
+            this.panel13.Location = new System.Drawing.Point(950, 5);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(40, 40);
             this.panel13.TabIndex = 3;
@@ -136,11 +146,12 @@
             this.HeaderLabel.AutoSize = true;
             this.HeaderLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HeaderLabel.ForeColor = System.Drawing.Color.White;
-            this.HeaderLabel.Location = new System.Drawing.Point(25, 13);
+            this.HeaderLabel.Location = new System.Drawing.Point(10, 13);
             this.HeaderLabel.Name = "HeaderLabel";
             this.HeaderLabel.Size = new System.Drawing.Size(426, 25);
             this.HeaderLabel.TabIndex = 2;
             this.HeaderLabel.Text = "Организация мероприятий по дрифту";
+            this.HeaderLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseDown);
             // 
             // panel1
             // 
@@ -148,16 +159,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 25);
+            this.panel1.Size = new System.Drawing.Size(1000, 25);
             this.panel1.TabIndex = 5;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem});
+            this.файлToolStripMenuItem,
+            this.отчётыToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem,
+            this.оРазработчикеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1000, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,6 +182,27 @@
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(114, 21);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            // 
+            // оРазработчикеToolStripMenuItem
+            // 
+            this.оРазработчикеToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.оРазработчикеToolStripMenuItem.Name = "оРазработчикеToolStripMenuItem";
+            this.оРазработчикеToolStripMenuItem.Size = new System.Drawing.Size(129, 21);
+            this.оРазработчикеToolStripMenuItem.Text = "О разработчике";
+            // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.tabPage1);
@@ -177,7 +212,7 @@
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(800, 525);
+            this.metroTabControl1.Size = new System.Drawing.Size(1000, 525);
             this.metroTabControl1.TabIndex = 6;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -189,7 +224,7 @@
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(792, 483);
+            this.tabPage1.Size = new System.Drawing.Size(992, 483);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Пилоты";
             // 
@@ -198,9 +233,9 @@
             this.panel7.Controls.Add(this.AchievementGrid);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(400, 280);
+            this.panel7.Location = new System.Drawing.Point(499, 280);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(392, 203);
+            this.panel7.Size = new System.Drawing.Size(493, 203);
             this.panel7.TabIndex = 13;
             // 
             // AchievementGrid
@@ -212,7 +247,7 @@
             this.AchievementGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AchievementGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AchievementGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -221,7 +256,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AchievementGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.AchievementGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -239,7 +274,7 @@
             this.AchievementGrid.Name = "AchievementGrid";
             this.AchievementGrid.ReadOnly = true;
             this.AchievementGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -247,10 +282,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AchievementGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.AchievementGrid.RowHeadersVisible = false;
             this.AchievementGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AchievementGrid.RowTemplate.Height = 25;
             this.AchievementGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AchievementGrid.Size = new System.Drawing.Size(392, 178);
+            this.AchievementGrid.Size = new System.Drawing.Size(493, 178);
             this.AchievementGrid.TabIndex = 2;
             // 
             // panel8
@@ -259,13 +295,13 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(392, 25);
+            this.panel8.Size = new System.Drawing.Size(493, 25);
             this.panel8.TabIndex = 1;
             // 
             // toolStrip3
             // 
             this.toolStrip3.AllowMerge = false;
-            this.toolStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip3.BackColor = System.Drawing.Color.White;
             this.toolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton4,
@@ -274,7 +310,7 @@
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip3.Size = new System.Drawing.Size(392, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(493, 25);
             this.toolStrip3.Stretch = true;
             this.toolStrip3.TabIndex = 0;
             this.toolStrip3.Text = "toolStrip3";
@@ -287,6 +323,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(90, 22);
             this.toolStripButton4.Text = "Добавить";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -313,7 +350,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 280);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 203);
+            this.panel3.Size = new System.Drawing.Size(493, 203);
             this.panel3.TabIndex = 12;
             // 
             // AutoGrid
@@ -325,7 +362,7 @@
             this.AutoGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AutoGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AutoGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -334,7 +371,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AutoGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.AutoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -352,7 +389,7 @@
             this.AutoGrid.Name = "AutoGrid";
             this.AutoGrid.ReadOnly = true;
             this.AutoGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -360,10 +397,11 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AutoGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.AutoGrid.RowHeadersVisible = false;
             this.AutoGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.AutoGrid.RowTemplate.Height = 25;
             this.AutoGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AutoGrid.Size = new System.Drawing.Size(392, 178);
+            this.AutoGrid.Size = new System.Drawing.Size(493, 178);
             this.AutoGrid.TabIndex = 2;
             // 
             // panel6
@@ -372,13 +410,13 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(392, 25);
+            this.panel6.Size = new System.Drawing.Size(493, 25);
             this.panel6.TabIndex = 1;
             // 
             // toolStrip2
             // 
             this.toolStrip2.AllowMerge = false;
-            this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip2.BackColor = System.Drawing.Color.White;
             this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -387,7 +425,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(392, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(493, 25);
             this.toolStrip2.Stretch = true;
             this.toolStrip2.TabIndex = 0;
             this.toolStrip2.Text = "toolStrip2";
@@ -410,6 +448,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(90, 22);
             this.toolStripButton2.Text = "Изменить";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -427,16 +466,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 240);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 40);
+            this.panel2.Size = new System.Drawing.Size(992, 40);
             this.panel2.TabIndex = 11;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(396, 0);
+            this.panel10.Location = new System.Drawing.Point(496, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(396, 40);
+            this.panel10.Size = new System.Drawing.Size(496, 40);
             this.panel10.TabIndex = 1;
             // 
             // label2
@@ -455,7 +494,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(396, 40);
+            this.panel9.Size = new System.Drawing.Size(496, 40);
             this.panel9.TabIndex = 0;
             // 
             // label1
@@ -476,7 +515,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(792, 240);
+            this.panel4.Size = new System.Drawing.Size(992, 240);
             this.panel4.TabIndex = 9;
             // 
             // PilotGrid
@@ -489,7 +528,7 @@
             this.PilotGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PilotGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.PilotGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -498,7 +537,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PilotGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.PilotGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -516,7 +555,7 @@
             this.PilotGrid.Name = "PilotGrid";
             this.PilotGrid.ReadOnly = true;
             this.PilotGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -524,10 +563,11 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PilotGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.PilotGrid.RowHeadersVisible = false;
             this.PilotGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.PilotGrid.RowTemplate.Height = 25;
             this.PilotGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PilotGrid.Size = new System.Drawing.Size(792, 215);
+            this.PilotGrid.Size = new System.Drawing.Size(992, 215);
             this.PilotGrid.TabIndex = 2;
             this.PilotGrid.SelectionChanged += new System.EventHandler(this.PilotGrid_SelectionChanged);
             // 
@@ -537,24 +577,27 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(792, 25);
+            this.panel5.Size = new System.Drawing.Size(992, 25);
             this.panel5.TabIndex = 1;
             // 
             // toolStrip1
             // 
             this.toolStrip1.AllowMerge = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PilotAddButton,
             this.OrganizatorEditButton,
-            this.OrganizatorDeleteButton});
+            this.OrganizatorDeleteButton,
+            this.toolStripSeparator1,
+            this.SearchTextBox,
+            this.PilotSearchButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(792, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(992, 25);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 0;
             // 
@@ -576,6 +619,7 @@
             this.OrganizatorEditButton.Name = "OrganizatorEditButton";
             this.OrganizatorEditButton.Size = new System.Drawing.Size(90, 22);
             this.OrganizatorEditButton.Text = "Изменить";
+            this.OrganizatorEditButton.Click += new System.EventHandler(this.OrganizatorEditButton_Click);
             // 
             // OrganizatorDeleteButton
             // 
@@ -586,12 +630,31 @@
             this.OrganizatorDeleteButton.Size = new System.Drawing.Size(79, 22);
             this.OrganizatorDeleteButton.Text = "Удалить";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(200, 25);
+            // 
+            // PilotSearchButton
+            // 
+            this.PilotSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("PilotSearchButton.Image")));
+            this.PilotSearchButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PilotSearchButton.Name = "PilotSearchButton";
+            this.PilotSearchButton.Size = new System.Drawing.Size(62, 22);
+            this.PilotSearchButton.Text = "Поиск";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel11);
-            this.tabPage2.Location = new System.Drawing.Point(4, 35);
+            this.tabPage2.Location = new System.Drawing.Point(4, 38);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(792, 486);
+            this.tabPage2.Size = new System.Drawing.Size(992, 483);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Мероприятия";
             // 
@@ -602,58 +665,8 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(792, 486);
+            this.panel11.Size = new System.Drawing.Size(992, 483);
             this.panel11.TabIndex = 9;
-            // 
-            // metroGrid
-            // 
-            this.metroGrid.AllowUserToAddRows = false;
-            this.metroGrid.AllowUserToDeleteRows = false;
-            this.metroGrid.AllowUserToResizeRows = false;
-            this.metroGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.metroGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid.DefaultCellStyle = dataGridViewCellStyle11;
-            this.metroGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid.EnableHeadersVisualStyles = false;
-            this.metroGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid.Location = new System.Drawing.Point(0, 25);
-            this.metroGrid.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.metroGrid.MultiSelect = false;
-            this.metroGrid.Name = "metroGrid";
-            this.metroGrid.ReadOnly = true;
-            this.metroGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.metroGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid.RowTemplate.Height = 25;
-            this.metroGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid.Size = new System.Drawing.Size(792, 461);
-            this.metroGrid.TabIndex = 2;
             // 
             // panel12
             // 
@@ -661,22 +674,25 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(792, 25);
+            this.panel12.Size = new System.Drawing.Size(992, 25);
             this.panel12.TabIndex = 1;
             // 
             // toolStrip4
             // 
             this.toolStrip4.AllowMerge = false;
-            this.toolStrip4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip4.BackColor = System.Drawing.Color.White;
             this.toolStrip4.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton7,
             this.toolStripButton8,
-            this.toolStripButton9});
+            this.toolStripButton9,
+            this.toolStripSeparator2,
+            this.toolStripTextBox1,
+            this.toolStripButton10});
             this.toolStrip4.Location = new System.Drawing.Point(0, 0);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip4.Size = new System.Drawing.Size(792, 25);
+            this.toolStrip4.Size = new System.Drawing.Size(992, 25);
             this.toolStrip4.Stretch = true;
             this.toolStrip4.TabIndex = 0;
             this.toolStrip4.Text = "toolStrip4";
@@ -689,6 +705,7 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(90, 22);
             this.toolStripButton7.Text = "Добавить";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripButton8
             // 
@@ -698,6 +715,7 @@
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(90, 22);
             this.toolStripButton8.Text = "Изменить";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
             // 
             // toolStripButton9
             // 
@@ -707,12 +725,83 @@
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(79, 22);
             this.toolStripButton9.Text = "Удалить";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 25);
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton10.Text = "Поиск";
+            // 
+            // metroGrid
+            // 
+            this.metroGrid.AllowUserToAddRows = false;
+            this.metroGrid.AllowUserToDeleteRows = false;
+            this.metroGrid.AllowUserToResizeRows = false;
+            this.metroGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.metroGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.metroGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid.DefaultCellStyle = dataGridViewCellStyle11;
+            this.metroGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroGrid.EnableHeadersVisualStyles = false;
+            this.metroGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid.Location = new System.Drawing.Point(0, 25);
+            this.metroGrid.Margin = new System.Windows.Forms.Padding(5);
+            this.metroGrid.MultiSelect = false;
+            this.metroGrid.Name = "metroGrid";
+            this.metroGrid.ReadOnly = true;
+            this.metroGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.metroGrid.RowHeadersVisible = false;
+            this.metroGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid.RowTemplate.Height = 25;
+            this.metroGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid.Size = new System.Drawing.Size(992, 458);
+            this.metroGrid.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Header);
@@ -755,11 +844,11 @@
             this.toolStrip1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -800,12 +889,21 @@
         private Label label1;
         private TabPage tabPage2;
         private Panel panel11;
-        private MetroFramework.Controls.MetroGrid metroGrid;
         private Panel panel12;
         private ToolStrip toolStrip4;
         private ToolStripButton toolStripButton7;
         private ToolStripButton toolStripButton8;
         private ToolStripButton toolStripButton9;
         private Panel panel13;
+        private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private ToolStripMenuItem оРазработчикеToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripTextBox SearchTextBox;
+        private ToolStripButton PilotSearchButton;
+        private ToolStripMenuItem отчётыToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripButton toolStripButton10;
+        private MetroFramework.Controls.MetroGrid metroGrid;
     }
 }

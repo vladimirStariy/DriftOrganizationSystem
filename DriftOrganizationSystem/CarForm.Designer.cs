@@ -185,6 +185,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CarForm";
             this.Text = "CarForm";
+            this.Load += new System.EventHandler(this.CarForm_Load);
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
             this.ResumeLayout(false);

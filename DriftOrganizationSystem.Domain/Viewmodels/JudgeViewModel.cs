@@ -8,6 +8,9 @@ namespace DriftOrganizationSystem.Domain.Viewmodels
 {
     public class JudgeViewModel
     {
-
+        public uint Judge_ID { get; set; }
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public string FatherName { get; set; }
     }
 }

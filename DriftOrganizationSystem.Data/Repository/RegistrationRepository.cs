@@ -7,41 +7,41 @@ using System.Threading.Tasks;
 
 namespace DriftOrganizationSystem.Data.Repository
 {
-    public class CarRepository
+    public class RegistrationRepository
     {
-        public void AddCar(Car entity)
+        public void AddRegistration(Registration entity)
         {
             using (DriftDbContext _db = new DriftDbContext())
             {
-                _db.Cars.Add(entity);
+                _db.Registrations.Add(entity);
                 _db.SaveChanges();
             }
         }
 
-        public void EditCar(Car entity)
+        public void EditSponsor(Registration entity)
         {
             using (DriftDbContext _db = new DriftDbContext())
             {
-                _db.Cars.Update(entity);
+                _db.Registrations.Update(entity);
                 _db.SaveChanges();
             }
         }
 
-        public void DeleteCar(int id)
+        public void DeleteSponsor(int id)
         {
             using (DriftDbContext _db = new DriftDbContext())
             {
-                var car = _db.Cars.Where(x => x.Car_ID == id).FirstOrDefault();
-                _db.Cars.Remove(car);
+                var registration = _db.Registrations.Where(x => x.Registration_ID == id).FirstOrDefault();
+                _db.Registrations.Remove(registration);
                 _db.SaveChanges();
             }
         }
 
-        public Car GetById(uint id)
+        public Registration GetById(uint id)
         {
             using (DriftDbContext _db = new DriftDbContext())
             {
-                return _db.Cars.Where(x => x.Car_ID == id).FirstOrDefault();
+                return _db.Registrations.Where(x => x.Registration_ID == id).FirstOrDefault();
             }
         }
     }

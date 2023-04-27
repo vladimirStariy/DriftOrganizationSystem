@@ -44,5 +44,9 @@ namespace DriftOrganizationSystem.Service.Services
         {
             _achievementRepository.DeleteAchievement(id);
         }
+        public Achievement GetById(uint id)
+        {
+            return _achievementRepository.GetById(id);
+        }
     }
 }

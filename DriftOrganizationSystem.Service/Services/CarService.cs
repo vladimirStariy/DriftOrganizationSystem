@@ -44,5 +44,9 @@ namespace DriftOrganizationSystem.Service.Services
         {
             _carRepository.DeleteCar(id);
         }
+        public Car GetById(uint id)
+        {
+            return _carRepository.GetById(id);
+        }
     }
 }

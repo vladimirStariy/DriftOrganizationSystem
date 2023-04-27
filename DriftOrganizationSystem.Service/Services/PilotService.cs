@@ -98,5 +98,10 @@ namespace DriftOrganizationSystem.Service.Services
             }
             return achievementView;
         }
+
+        public Pilot GetById(uint id)
+        {
+            return _pilotRepository.GetById(id);
+        }
     }
 }

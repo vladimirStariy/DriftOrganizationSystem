@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Header = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.SurnameBox = new System.Windows.Forms.TextBox();
             this.NameBox = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AcceptBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,14 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(300, 50);
             this.Header.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Location = new System.Drawing.Point(255, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(40, 40);
+            this.panel1.TabIndex = 14;
             // 
             // HeaderLabel
             // 
@@ -139,14 +147,6 @@
             this.AcceptBtn.UseVisualStyleBackColor = true;
             this.AcceptBtn.Click += new System.EventHandler(this.AcceptBtn_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(255, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(40, 40);
-            this.panel1.TabIndex = 14;
-            // 
             // PilotForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -165,6 +165,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PilotForm";
             this.Text = "PilotForm";
+            this.Load += new System.EventHandler(this.PilotForm_Load);
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
             this.ResumeLayout(false);

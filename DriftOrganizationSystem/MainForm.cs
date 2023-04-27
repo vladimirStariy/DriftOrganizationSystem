@@ -16,6 +16,8 @@ namespace DriftOrganizationSystem.View
     public partial class MainForm : Form
     {
         PilotService pilotService = new PilotService();
+        EventService eventService = new EventService();
+
         int checker = 0;
 
         public MainForm()
@@ -27,6 +29,9 @@ namespace DriftOrganizationSystem.View
         {
             PilotGrid.DataSource = pilotService.GetPilots();
             PilotGrid.Columns[0].Visible = false;
+
+            metroGrid.DataSource = eventService.GetEvents();
+            metroGrid.Columns[0].Visible = false;
 
             try
             {
@@ -53,7 +58,7 @@ namespace DriftOrganizationSystem.View
 
         private void PilotAddButton_Click(object sender, EventArgs e)
         {
-            PilotForm PF = new PilotForm();
+            PilotForm PF = new PilotForm(0, "add");
             if(PF.ShowDialog() == DialogResult.OK)
             {
                 PilotGrid.DataSource = pilotService.GetPilots();           
@@ -69,7 +74,7 @@ namespace DriftOrganizationSystem.View
         {
             try
             {
-                CarForm PF = new CarForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                CarForm PF = new CarForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value), 0, "add");
                 if (PF.ShowDialog() == DialogResult.OK)
                 {
                     AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
@@ -89,12 +94,101 @@ namespace DriftOrganizationSystem.View
             try
             {
                 if (checker == 1)
+                {
                     AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                    AchievementGrid.DataSource = pilotService.GetPilotAchievements(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                }
+                    
+
             }
             catch
             {
 
             }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AchievementForm AF = new AchievementForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value), Convert.ToUInt32(AchievementGrid.SelectedRows[0].Cells[0].Value), "add");
+                if (AF.ShowDialog() == DialogResult.OK)
+                {
+                    AchievementGrid.DataSource = pilotService.GetPilotAchievements(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                    AutoGrid.Columns[0].Visible = false;
+                    AutoGrid.Columns[1].Visible = false;
+                    checker = 1;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Выберите пилота");
+            }
+        }
+
+        private void OrganizatorEditButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CarForm CF = new CarForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value), Convert.ToUInt32(AutoGrid.SelectedRows[0].Cells[0].Value), "edit");
+                if (CF.ShowDialog() == DialogResult.OK)
+                {
+                    AutoGrid.DataSource = pilotService.GetPilotCars(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
+                    AutoGrid.Columns[0].Visible = false;
+                    AutoGrid.Columns[1].Visible = false;
+                    checker = 1;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Выберите пилота");
+            }
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                //EventForm EF = new EventForm();
+                //if(EF.ShowDialog() == DialogResult.OK)
+                //{
+
+                //}
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HeaderLabel_MouseDown(object sender, MouseEventArgs e)
+        {
+            HeaderLabel.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
+        }
+
+        private void Header_MouseDown(object sender, MouseEventArgs e)
+        {
+            Header.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
     }
 }
