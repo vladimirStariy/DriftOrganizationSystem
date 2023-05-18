@@ -11,8 +11,8 @@ namespace DriftOrganizationSystem.Domain.Entity
     public class Registration
     {
         public uint Registration_ID { get; set; }
-        public double Mark { get; set; }
-        public int Place { get; set; }
+        public double? Mark { get; set; }
+        public int? Place { get; set; }
         public uint Pilot_ID { get; set; }
         [ForeignKey("Pilot_ID")]
         public virtual Pilot Pilot { get; set; }

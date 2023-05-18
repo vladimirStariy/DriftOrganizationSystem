@@ -75,7 +75,7 @@
             // 
             // SurnameBox
             // 
-            this.SurnameBox.Location = new System.Drawing.Point(26, 91);
+            this.SurnameBox.Location = new System.Drawing.Point(25, 91);
             this.SurnameBox.Name = "SurnameBox";
             this.SurnameBox.Size = new System.Drawing.Size(171, 23);
             this.SurnameBox.TabIndex = 5;

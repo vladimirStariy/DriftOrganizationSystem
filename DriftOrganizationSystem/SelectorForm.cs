@@ -18,7 +18,7 @@ namespace DriftOrganizationSystem.View
         //OrganizatorService organizatorService = new OrganizatorService();
         //SponsorService sponsorService = new SponsorService();
         //JudgeService judgeService = new JudgeService(); 
-
+        public uint selId;
 
         public SelectorForm(string GridMode)
         {
@@ -28,7 +28,8 @@ namespace DriftOrganizationSystem.View
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-
+            selId = Convert.ToUInt32(SelectorDataGrid.SelectedRows[0].Cells[0].Value);
+            this.DialogResult = DialogResult.OK;
         }
 
         private void SelectorForm_Load(object sender, EventArgs e)
@@ -36,7 +37,6 @@ namespace DriftOrganizationSystem.View
             if(_gridMode == "pilot")
             {
                 SelectorDataGrid.DataSource = pilotService.GetPilots();
-
             }
             else
             if(_gridMode == "organizator")

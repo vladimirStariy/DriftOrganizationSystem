@@ -111,7 +111,7 @@ namespace DriftOrganizationSystem.View
         {
             try
             {
-                AchievementForm AF = new AchievementForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value), Convert.ToUInt32(AchievementGrid.SelectedRows[0].Cells[0].Value), "add");
+                AchievementForm AF = new AchievementForm(Convert.ToUInt32(PilotGrid.SelectedRows[0].Cells[0].Value), 0, "add");
                 if (AF.ShowDialog() == DialogResult.OK)
                 {
                     AchievementGrid.DataSource = pilotService.GetPilotAchievements(Convert.ToInt32(PilotGrid.SelectedRows[0].Cells[0].Value));
@@ -154,11 +154,11 @@ namespace DriftOrganizationSystem.View
         {
             try 
             {
-                //EventForm EF = new EventForm();
-                //if(EF.ShowDialog() == DialogResult.OK)
-                //{
+                EventForm EF = new EventForm(0, "add");
+                if (EF.ShowDialog() == DialogResult.OK)
+                {
 
-                //}
+                }
             }
             catch
             {

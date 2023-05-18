@@ -53,13 +53,13 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(300, 50);
+            this.Header.Size = new System.Drawing.Size(410, 50);
             this.Header.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(255, 5);
+            this.panel1.Location = new System.Drawing.Point(365, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(40, 40);
             this.panel1.TabIndex = 14;
@@ -77,9 +77,9 @@
             // 
             // AcceptButton
             // 
-            this.AcceptButton.Location = new System.Drawing.Point(57, 383);
+            this.AcceptButton.Location = new System.Drawing.Point(25, 357);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(75, 55);
+            this.AcceptButton.Size = new System.Drawing.Size(360, 55);
             this.AcceptButton.TabIndex = 6;
             this.AcceptButton.Text = "Принять";
             this.AcceptButton.UseVisualStyleBackColor = true;
@@ -87,81 +87,91 @@
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(57, 92);
+            this.NameBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NameBox.Location = new System.Drawing.Point(25, 92);
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(100, 23);
+            this.NameBox.Size = new System.Drawing.Size(360, 27);
             this.NameBox.TabIndex = 7;
             // 
             // EngineBox
             // 
-            this.EngineBox.Location = new System.Drawing.Point(57, 153);
+            this.EngineBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EngineBox.Location = new System.Drawing.Point(25, 146);
             this.EngineBox.Name = "EngineBox";
-            this.EngineBox.Size = new System.Drawing.Size(100, 23);
+            this.EngineBox.Size = new System.Drawing.Size(360, 27);
             this.EngineBox.TabIndex = 8;
             // 
             // PowerBox
             // 
-            this.PowerBox.Location = new System.Drawing.Point(57, 216);
+            this.PowerBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PowerBox.Location = new System.Drawing.Point(25, 200);
             this.PowerBox.Name = "PowerBox";
-            this.PowerBox.Size = new System.Drawing.Size(100, 23);
+            this.PowerBox.Size = new System.Drawing.Size(360, 27);
             this.PowerBox.TabIndex = 9;
             // 
             // FuelBox
             // 
-            this.FuelBox.Location = new System.Drawing.Point(57, 271);
+            this.FuelBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FuelBox.Location = new System.Drawing.Point(25, 254);
             this.FuelBox.Name = "FuelBox";
-            this.FuelBox.Size = new System.Drawing.Size(100, 23);
+            this.FuelBox.Size = new System.Drawing.Size(360, 27);
             this.FuelBox.TabIndex = 10;
             // 
             // WeightBox
             // 
-            this.WeightBox.Location = new System.Drawing.Point(57, 330);
+            this.WeightBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WeightBox.Location = new System.Drawing.Point(25, 308);
             this.WeightBox.Name = "WeightBox";
-            this.WeightBox.Size = new System.Drawing.Size(100, 23);
+            this.WeightBox.Size = new System.Drawing.Size(360, 27);
             this.WeightBox.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 74);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(23, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 15);
+            this.label1.Size = new System.Drawing.Size(134, 21);
             this.label1.TabIndex = 12;
             this.label1.Text = "Наименование";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 135);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(25, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 15);
+            this.label2.Size = new System.Drawing.Size(117, 21);
             this.label2.TabIndex = 13;
             this.label2.Text = "Тип двигателя";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 198);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(25, 176);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 14;
             this.label3.Text = "Мощность";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 253);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(25, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 15);
+            this.label4.Size = new System.Drawing.Size(105, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "Тип топлива";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 312);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(25, 284);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 15);
+            this.label5.Size = new System.Drawing.Size(39, 21);
             this.label5.TabIndex = 16;
             this.label5.Text = "Вес";
             // 
@@ -169,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 450);
+            this.ClientSize = new System.Drawing.Size(410, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
